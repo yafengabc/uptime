@@ -1,0 +1,10 @@
+[Unit]
+Description=record uptime
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/record.sh
+
+[Install]
+WantedBy=multi-user.target

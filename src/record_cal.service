@@ -1,0 +1,9 @@
+[Unit]
+Description=record uptime cal
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/record.py
+
+[Install]
+WantedBy=multi-user.target
