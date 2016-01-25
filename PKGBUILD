@@ -1,7 +1,7 @@
 # Maintainer: Yafeng <yafengabc@gmail.com>
 
 pkgname=uptimerec
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 pkgdesc="A tools record system uptime and boottimes"
 url=""

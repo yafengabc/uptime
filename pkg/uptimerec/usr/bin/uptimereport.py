@@ -12,17 +12,17 @@ def format_his():
         ti=int(float(i[1]))
         Day=ti//(3600*24)
         Hou=ti//3600-Day*24
-        Min=(ti-Day*3600*24-Hou*3600)//60
+        Min=ti//60
         print(i[0],"{}天{}小时{}分钟".format(Day,Hou,Min))
 
+format_his()
 
 try:
-    format_his()
     db=open('/var/log/uptime.db','rb')
     result=pickle.load(db)
     db.close()
 except:
-    print('数据库文件不存在，重启后生成!')
+    print('db file not exits!')
     boot_t=time.strftime('%Y-%m-%d %H:%M:%S')
     result={'uptime':0,'bootimes':0,'begin':boot_t}
 ti=result['uptime']
@@ -40,3 +40,4 @@ Min=int(60*((ti-Day)*24-Hour))
 print("本次开机时间:",Day,'天',Hour,"小时",Min,'分钟')
 t=result['begin']
 print('----------------------------------')
+print("本程序计时开始于",t)
