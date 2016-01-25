@@ -1,9 +1,0 @@
-[Unit]
-Description=record uptime cal
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/uptimerec.py
-
-[Install]
-WantedBy=multi-user.target
